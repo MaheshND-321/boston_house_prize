@@ -28,7 +28,7 @@ def predict():
     final_input=scaler.transform(np.array(data).reshape(1,-1))
     print(final_input)
     output = regmodel.predict(final_input)
-    return render_template("home.html",prediction_text="The House prize is {}".format(output[0]))
+    return render_template("home.html",prediction_text="The House prize is ${}".format(output[0]))
 
 if __name__ == '__main__':
     app.run(debug=True)
